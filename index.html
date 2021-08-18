@@ -573,6 +573,7 @@ function autoload_hen_mira(PLfile, byicon)
   {
   if (PLfile != ""){
     localStorage.choosedpl = PLfile;
+    localStorage.isicon = byicon;
       if (byicon == true) {
     if(PLfile=="goldhen_1.1_672.bin"){//load GOLD HEN v1.1
       SALTX.style.display = 'block';payloads.style.display = 'none';detail.style.display = 'none';txt1.innerHTML="<div>Loading GOLD HEN v1.1 ...</div>";  setTimeout(parent.jailbreak,500);}

@@ -5,16 +5,22 @@ if (main_ret == 179 || main_ret == 0){
 var userAgent = navigator.userAgent;
 if (userAgent.indexOf("PlayStation 4 6.72") != -1) {
 localStorage.passcount = ++localStorage.passcount;window.passCounter.innerHTML=localStorage.passcount;
-txt1.innerHTML="Exploit Loaded ✔ Loading Payload...";
+if (localStorage.choosedpl != "" && localStorage.isicon==false){msgs2.innerHTML="<div>Exploit Loaded ✔ Loading Payload...</div>"}
+else{
+txt1.innerHTML="Exploit Loaded ✔ Loading Payload...";}
 var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
-	}
-	else{
-txt1.innerHTML="Exploit Loaded ✔ Loading Payload...";
+}
+else{
+if (localStorage.choosedpl != "" && localStorage.isicon==false){msgs2.innerHTML="<div>Exploit Loaded ✔ Loading Payload...</div>"}
+else{
+txt1.innerHTML="Exploit Loaded ✔ Loading Payload...";}
 var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
-	}
-	}
+}
+}
 else{
 localStorage.failcount = ++localStorage.failcount;window.failCounter.innerHTML=localStorage.failcount;
-txt1.innerHTML="Jailbreak failed! - Reboot your PS4 and try again";
+if (localStorage.choosedpl != "" && localStorage.isicon==false){msgs2.innerHTML="<div>Jailbreak failed! - Reboot your PS4 and try again</div>"}
+else{
+txt1.innerHTML="Jailbreak failed! - Reboot your PS4 and try again";}
 }
 }
